@@ -10,7 +10,7 @@ import pandas as pd
 from datasets import load_dataset
 import logging
 import numpy as np
-
+import os
 from .config import Config
 from .utils import clean_text, setup_logging
 
@@ -50,7 +50,7 @@ class ArabicHateSpeechDataset(Dataset):
         """Return the number of samples in the dataset."""
         return len(self.texts)
     
-    def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
+    def __getitem__(self, idx: int) -> Dict[str, Any]:
         """
         Get a single sample from the dataset.
         
@@ -58,7 +58,7 @@ class ArabicHateSpeechDataset(Dataset):
             idx: Index of the sample
             
         Returns:
-            Dictionary containing input_ids, attention_mask, and labels
+            Dictionary containing text and label (tokenization happens in collate_fn)
         """
         text = str(self.texts[idx])
         label = int(self.labels[idx])
@@ -66,18 +66,9 @@ class ArabicHateSpeechDataset(Dataset):
         # Clean the text
         text = clean_text(text)
         
-        # Tokenize the text
-        encoding = self.tokenizer(
-            text,
-            truncation=True,
-            padding='max_length',
-            max_length=self.max_length,
-            return_tensors='pt'
-        )
-        
+        # Return raw text for batch processing (tokenization happens in collate_fn)
         return {
-            'input_ids': encoding['input_ids'].flatten(),
-            'attention_mask': encoding['attention_mask'].flatten(),
+            'text': text,
             'labels': torch.tensor(label, dtype=torch.long)
         }
 
@@ -102,49 +93,51 @@ class DataProcessor:
         
         logger.info(f"Tokenizer loaded: {config.model_name}")
     
+    def collate_fn(self, batch: List[Dict[str, Any]]) -> Dict[str, torch.Tensor]:
+        """
+        Custom collate function for efficient batch tokenization.
+        
+        Args:
+            batch: List of samples from the dataset
+            
+        Returns:
+            Batch of tokenized samples
+        """
+        texts = [item['text'] for item in batch]
+        labels = torch.stack([item['labels'] for item in batch])
+        
+        # Tokenize the entire batch at once (much more efficient!)
+        encoding = self.tokenizer(
+            texts,
+            truncation=True,
+            padding='max_length',
+            max_length=self.config.max_length,
+            return_tensors='pt'
+        )
+        
+        return {
+            'input_ids': encoding['input_ids'],
+            'attention_mask': encoding['attention_mask'],
+            'labels': labels
+        }
+    
     def load_dataset(self) -> Tuple[Dataset, Dataset, Dataset]:
         """
-        Load and preprocess the dataset.
+        Load and preprocess the dataset from our cleaned CSV file.
         
         Returns:
             Tuple of (train_dataset, val_dataset, test_dataset)
         """
-        logger.info(f"Loading dataset: {self.config.dataset_name}")
+        logger.info("Loading cleaned dataset from CSV file...")
         
         try:
-            # Load dataset from Hugging Face
-            logger.info("Loading dataset from Hugging Face...")
-            dataset = load_dataset("manueltonneau/arabic-hate-speech-superset")
             
-            # Check available splits
-            available_splits = list(dataset.keys())
-            logger.info(f"Available splits: {available_splits}")
+            data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Cleaned_arabic_hate_speech.csv") 
+            df = pd.read_csv(data_path)
             
-            if not available_splits:
-                raise ValueError("No splits found in the dataset")
-            
-            # The dataset has only one split, so we'll use it as the main data
-            if "train" in dataset:
-                ds = dataset["train"]
-                logger.info("Using 'train' split")
-            else:
-                # If no "train" split, use the first available split
-                split_name = available_splits[0]
-                ds = dataset[split_name]
-                logger.info(f"Using split: {split_name}")
-            
-            logger.info(f"Total samples: {len(ds)}")
-            logger.info(f"Dataset columns: {ds.column_names}")
-            
-            # Validate required columns exist
-            required_columns = ['text', 'labels']
-            missing_columns = [col for col in required_columns if col not in ds.column_names]
-            if missing_columns:
-                raise ValueError(f"Missing required columns: {missing_columns}")
-            
-            # Extract all texts and labels
-            all_texts = ds['text']
-            all_labels = ds['labels']  # Note: using 'labels' not 'label'
+            # Extract texts and labels
+            all_texts = df['text'].astype(str).tolist()
+            all_labels = df['labels'].astype(int).tolist()
             
             # Validate data
             if len(all_texts) == 0:
@@ -154,7 +147,7 @@ class DataProcessor:
             if len(all_texts) != len(all_labels):
                 raise ValueError(f"Mismatch between text ({len(all_texts)}) and labels ({len(all_labels)}) count")
             
-            logger.info(f"Successfully loaded {len(all_texts)} samples")
+            logger.info(f"Successfully loaded {len(all_texts)} samples from CSV")
             
             # Split the data into train, validation, and test sets
             total_size = len(all_texts)
@@ -201,7 +194,7 @@ class DataProcessor:
             return train_dataset, val_dataset, test_dataset
             
         except Exception as e:
-            logger.error(f"Error loading dataset: {str(e)}")
+            logger.error(f"Error loading dataset from CSV: {str(e)}")
             raise
     
     def create_dataloaders(self, 
@@ -230,7 +223,8 @@ class DataProcessor:
                 batch_size=self.config.batch_size,
                 sampler=train_sampler,
                 num_workers=0,  # Set to 0 for Windows compatibility
-                pin_memory=pin_memory
+                pin_memory=pin_memory,
+                collate_fn=self.collate_fn  # Add custom collate function
             )
             logger.info("Using WeightedRandomSampler for training")
         else:
@@ -239,7 +233,8 @@ class DataProcessor:
                 batch_size=self.config.batch_size,
                 shuffle=True,
                 num_workers=0,  # Set to 0 for Windows compatibility
-                pin_memory=pin_memory
+                pin_memory=pin_memory,
+                collate_fn=self.collate_fn  # Add custom collate function
             )
         
         val_loader = DataLoader(
@@ -247,7 +242,8 @@ class DataProcessor:
             batch_size=self.config.batch_size,
             shuffle=False,
             num_workers=0,
-            pin_memory=pin_memory
+            pin_memory=pin_memory,
+            collate_fn=self.collate_fn  # Add custom collate function
         )
         
         test_loader = DataLoader(
@@ -255,7 +251,8 @@ class DataProcessor:
             batch_size=self.config.batch_size,
             shuffle=False,
             num_workers=0,
-            pin_memory=pin_memory
+            pin_memory=pin_memory,
+            collate_fn=self.collate_fn  # Add custom collate function
         )
         
         logger.info(f"DataLoaders created - Batch size: {self.config.batch_size}")
