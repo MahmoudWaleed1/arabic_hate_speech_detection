@@ -1,8 +1,8 @@
 {
-  "model_name": "aubmindlab/bert-base-arabertv02",
+  "model_name": "UBC-NLP/MARBERT",
   "num_labels": 2,
   "max_length": 128,
-  "batch_size": 16,
+  "batch_size": 8,
   "learning_rate": 2e-5,
   "num_epochs": 3,
   "warmup_steps": 100,

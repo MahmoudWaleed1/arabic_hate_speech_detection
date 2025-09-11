@@ -20,7 +20,7 @@ class ArabicHateSpeechClassifier(nn.Module):
     """
     
     def __init__(self, 
-                 model_name: str, 
+                 model_name: str = "UBC-NLP/MARBERT", 
                  num_labels: int = 2,
                  dropout_rate: float = 0.1,
                  freeze_bert: bool = False,

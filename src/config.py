@@ -13,7 +13,7 @@ class Config:
     """Configuration class for the Arabic Hate Speech Detection project."""
     
     # Model Configuration
-    model_name: str = "aubmindlab/bert-base-arabertv02"
+    model_name: str = "UBC-NLP/MARBERT"
     num_labels: int = 2  # Binary classification: hate speech or not
     max_length: int = 128
     

@@ -10,8 +10,8 @@ from tqdm import tqdm
 import time
 import json
 import os
-from typing import Dict, List, Tuple, Any
 import logging
+from typing import Dict, List, Tuple, Any, Optional  
 
 # Import for mixed precision training
 try:
