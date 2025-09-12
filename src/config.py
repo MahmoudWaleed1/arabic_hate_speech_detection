@@ -18,8 +18,8 @@ class Config:
     max_length: int = 128
     
     # Training Configuration
-    batch_size: int = 16
-    learning_rate: float = 2e-5
+    batch_size: int = 12
+    learning_rate: float = 9e-6
     num_epochs: int = 3
     warmup_steps: int = 100
     weight_decay: float = 0.01
@@ -37,8 +37,8 @@ class Config:
     results_dir: str = os.path.join(project_root, "results")
     
     # Model saving
-    model_save_path: str = os.path.join(models_dir, "arabert_hate_speech_model")
-    best_model_path: str = os.path.join(models_dir, "best_arabert_model")
+    model_save_path: str = os.path.join(models_dir, "marbert_hate_speech_model")
+    best_model_path: str = os.path.join(models_dir, "best_marbert_model")
     
     # Logging
     log_file: str = os.path.join(results_dir, "training.log")
@@ -61,11 +61,11 @@ class Config:
     seed: int = 42
     
     # New configuration options
-    loss_function: str = "ce"  # ce, weighted, focal
-    threshold: float = 0.5  # Probability threshold for classification
-    use_sampler: bool = False  # Use WeightedRandomSampler for oversampling
-    focal_alpha: float = 1.0  # Alpha parameter for focal loss
-    focal_gamma: float = 2.0  # Gamma parameter for focal loss
+    loss_function: str = "focal"  # focal
+    threshold: float = 0.3  # Probability threshold for classification
+    use_sampler: bool = True  # Use WeightedRandomSampler for oversampling
+    focal_alpha: float = 0.7  # Alpha parameter for focal loss
+    focal_gamma: float = 3  # Gamma parameter for focal loss
     
     def __post_init__(self):
         """Create necessary directories after initialization."""

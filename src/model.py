@@ -1,5 +1,5 @@
 """
-Model definition for Arabic Hate Speech Detection using AraBERT.
+Model definition for Arabic Hate Speech Detection using MarBERT.
 """
 
 import torch
@@ -16,7 +16,7 @@ logger = setup_logging("model.log")
 
 class ArabicHateSpeechClassifier(nn.Module):
     """
-    Arabic Hate Speech Detection model based on AraBERT.
+    Arabic Hate Speech Detection model based on MarBERT.
     """
     
     def __init__(self, 

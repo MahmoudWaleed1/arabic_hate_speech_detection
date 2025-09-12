@@ -1,0 +1,57 @@
+{
+  "train_losses": [
+    0.03827000660006848,
+    0.024098919233846657,
+    0.018578654951235167
+  ],
+  "val_losses": [
+    0.043493933169916274,
+    0.04196727819498628,
+    0.05617550628894242
+  ],
+  "val_accuracies": [
+    0.8552,
+    0.8625333333333334,
+    0.8729333333333333
+  ],
+  "best_accuracy": 0.8729333333333333,
+  "total_epochs": 3,
+  "total_time": 2581.7148230075836,
+  "config": {
+    "model_name": "UBC-NLP/MARBERT",
+    "num_labels": 2,
+    "max_length": 128,
+    "batch_size": 12,
+    "learning_rate": 9e-06,
+    "num_epochs": 3,
+    "warmup_steps": 100,
+    "weight_decay": 0.01,
+    "dataset_name": "manueltonneau/arabic-hate-speech-superset",
+    "train_split": "train",
+    "test_split": "test",
+    "validation_split": 0.1,
+    "project_root": "C:\\deep learning\\Balanced data",
+    "data_dir": "C:\\deep learning\\Balanced data\\data",
+    "models_dir": "C:\\deep learning\\Balanced data\\models",
+    "results_dir": "C:\\deep learning\\Balanced data\\results",
+    "model_save_path": "C:\\deep learning\\Balanced data\\models\\marbert_hate_speech_model",
+    "best_model_path": "C:\\deep learning\\Balanced data\\models\\best_marbert_model",
+    "log_file": "C:\\deep learning\\Balanced data\\results\\training.log",
+    "loss_plot_path": "C:\\deep learning\\Balanced data\\results\\loss_curve.png",
+    "metrics_file": "C:\\deep learning\\Balanced data\\results\\metrics.json",
+    "save_steps": 500,
+    "eval_steps": 500,
+    "logging_steps": 100,
+    "early_stopping_patience": 3,
+    "device": "auto",
+    "force_cpu": false,
+    "mixed_precision": true,
+    "dataloader_pin_memory": true,
+    "seed": 42,
+    "loss_function": "focal",
+    "threshold": 0.3,
+    "use_sampler": true,
+    "focal_alpha": 0.7,
+    "focal_gamma": 3
+  }
+}

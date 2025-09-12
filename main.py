@@ -191,7 +191,7 @@ def predict_text(config: Config, text: str) -> dict:
 def main():
     """Main function."""
     parser = argparse.ArgumentParser(
-        description="Arabic Hate Speech Detection using AraBERT"
+        description="Arabic Hate Speech Detection using Marbert"
     )
     
     parser.add_argument(

@@ -132,8 +132,9 @@ class DataProcessor:
         
         try:
             
-            data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Cleaned_arabic_hate_speech.csv") 
+            data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "cleaned_data.csv") 
             df = pd.read_csv(data_path)
+            df = pd.concat([df[df['labels']==1], df[df['labels']==0].sample(n=50000-len(df[df['labels']==1]), random_state=42)]).sample(frac=1, random_state=42).reset_index(drop=True) # Keep only 50K samples and all hatespeech
             
             # Extract texts and labels
             all_texts = df['text'].astype(str).tolist()

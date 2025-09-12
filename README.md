@@ -4,7 +4,7 @@ A complete deep learning project for detecting hate speech in Arabic text using 
 🎯 Project Overview
 This project implements a state-of-the-art Arabic hate speech detection system using:
 
-Model: aubmindlab/bert-base-arabertv02 (MARBERT v2)
+Model: aubmindlab/bert-base-marbertv02 (MARBERT v2)
 
 Dataset: manueltonneau/arabic-hate-speech-superset
 
@@ -148,7 +148,7 @@ The project uses a centralized configuration system in src/config.py and config.
 
 python
 # Model Configuration
-model_name = "aubmindlab/bert-base-arabertv02"
+model_name = "aubmindlab/bert-base-marbertv02"
 max_length = 128
 num_labels = 2
 
@@ -201,7 +201,7 @@ A complete deep learning project for detecting hate speech in Arabic text using 
 🎯 Project Overview
 This project implements a state-of-the-art Arabic hate speech detection system using:
 
-Model: aubmindlab/bert-base-arabertv02 (MARBERT v2)
+Model: aubmindlab/bert-base-marbertv02 (MARBERT v2)
 
 Dataset: manueltonneau/arabic-hate-speech-superset
 
@@ -345,7 +345,7 @@ The project uses a centralized configuration system in src/config.py and config.
 
 python
 # Model Configuration
-model_name = "aubmindlab/bert-base-arabertv02"
+model_name = "aubmindlab/bert-base-marbertv02"
 max_length = 128
 num_labels = 2
 
@@ -636,7 +636,7 @@ For fine-tuning on specific domains:
 python
 # Load pre-trained model
 model = ArabicHateSpeechClassifier(
-    model_name="aubmindlab/bert-base-arabertv02",
+    model_name="aubmindlab/bert-base-marbertv02",
     num_labels=2,
     freeze_bert=False  # Allow fine-tuning
 )
@@ -844,7 +844,7 @@ This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
-- **AraBERT Team**: For the excellent pre-trained Arabic BERT model (`aubmindlab/bert-base-arabertv02`)
+- **MARBERT Team**: For the excellent pre-trained Arabic BERT model (`aubmindlab/bert-base-marbertv02`)
 - **Hugging Face**: For the transformers and datasets libraries
 - **Dataset Authors**: For providing the Arabic hate speech dataset (`manueltonneau/arabic-hate-speech-superset`)
 - **PyTorch Team**: For the deep learning framework and CUDA support
@@ -889,7 +889,7 @@ python main.py --mode predict --text "النص العربي هنا"
 - `src/config.py`: Configuration settings
 - `CUDA_GUIDE.md`: Detailed CUDA usage guide
 - `results/training.log`: Training progress logs
-- `models/best_arabert_model.pt`: Best trained model
+- `models/best_marbert_model.pt`: Best trained model
 
 ---
 

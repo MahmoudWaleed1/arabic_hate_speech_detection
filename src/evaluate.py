@@ -155,12 +155,13 @@ class Evaluator:
             'precision': float(precision),
             'recall': float(recall),
             'f1_score': float(f1),
-            'support': int(support),
+            'support': int(support) if support is not None else 0,
             'threshold': threshold,
             'per_class_metrics': per_class_metrics,
             'predictions': [int(p) for p in all_predictions],  # Convert to int for JSON serialization
             'labels': [int(l) for l in all_labels],  # Convert to int for JSON serialization
-            'probabilities': [[float(prob) for prob in probs] for probs in all_probabilities]  # Convert to float for JSON serialization
+            'probabilities': [[float(prob) for prob in probs] for probs
+                               in all_probabilities]  # Convert to float for JSON serialization
         }
         
         # Log results
