@@ -19,9 +19,9 @@ class Config:
     
     # Training Configuration
     batch_size: int = 12
-    learning_rate: float = 9e-6
-    num_epochs: int = 3
-    warmup_steps: int = 100
+    learning_rate: float = 1e-5
+    num_epochs: int = 5
+    warmup_steps: int = 80
     weight_decay: float = 0.01
     
     # Data Configuration
@@ -62,9 +62,9 @@ class Config:
     
     # New configuration options
     loss_function: str = "focal"  # focal
-    threshold: float = 0.3  # Probability threshold for classification
+    threshold: float = 0.45  # Probability threshold for classification
     use_sampler: bool = True  # Use WeightedRandomSampler for oversampling
-    focal_alpha: float = 0.7  # Alpha parameter for focal loss
+    focal_alpha: float = 0.8  # Alpha parameter for focal loss
     focal_gamma: float = 3  # Gamma parameter for focal loss
     
     def __post_init__(self):

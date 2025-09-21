@@ -32,7 +32,7 @@ def compare_epochs():
     
     # Check which epoch files exist
     epoch_files = []
-    for epoch in [1, 2, 3]:
+    for epoch in [1, 2, 3, 4, 5]:
         model_path = f"{config.models_dir}/marbert_hate_speech_model_epoch_{epoch}.pt"
         if os.path.exists(model_path):
             epoch_files.append((epoch, model_path))
@@ -60,25 +60,47 @@ def compare_epochs():
             # Load specific checkpoint
             evaluator.model_manager.load_model(model, model_path, load_optimizer=False)
             
-            # Evaluate
+            # Evaluate with threshold 0.3
             metrics = evaluator.evaluate_model(model, test_loader, threshold=0.3)
             results[epoch_name] = metrics
             
+            # Print in the exact format you want
             print(f"Accuracy: {metrics['accuracy']:.4f}")
-            print(f"Hate Precision: {metrics['per_class_metrics']['Hate Speech']['precision']:.4f}")
-            print(f"Hate Recall: {metrics['per_class_metrics']['Hate Speech']['recall']:.4f}")
+            
+            # Print metrics for BOTH classes
+            for class_name in ['Hate Speech', 'Not Hate Speech']:
+                if class_name in metrics['per_class_metrics']:
+                    class_metrics = metrics['per_class_metrics'][class_name]
+                    print(f"{class_name} Precision: {class_metrics['precision']:.4f}")
+                    print(f"{class_name} Recall: {class_metrics['recall']:.4f}")
+                    print(f"{class_name} F1: {class_metrics.get('f1_score', class_metrics.get('f1', 0)):.4f}")
+                    print()  # Empty line for readability
             
         except Exception as e:
             print(f"Error evaluating {epoch_name}: {e}")
+            import traceback
+            traceback.print_exc()
     
-    # Print comparison
-    print(f"\n{'='*60}")
+    # Print comparison table with ALL metrics
+    print(f"\n{'='*80}")
     print("COMPARISON RESULTS")
-    print(f"{'='*60}")
+    print(f"{'='*80}")
+    
+    # Print header
+    print(f"{'Model':<8} | {'Acc':<6} | {'Hate-P':<6} | {'Hate-R':<6} | {'Hate-F1':<6} | {'NonHate-P':<8} | {'NonHate-R':<8} | {'NonHate-F1':<8}")
+    print('-' * 80)
+    
     for epoch_name, metrics in results.items():
-        print(f"{epoch_name}: Acc={metrics['accuracy']:.4f}, "
-              f"Hate-P={metrics['per_class_metrics']['Hate Speech']['precision']:.4f}, "
-              f"Hate-R={metrics['per_class_metrics']['Hate Speech']['recall']:.4f}")
+        hate_metrics = metrics['per_class_metrics']['Hate Speech']
+        non_hate_metrics = metrics['per_class_metrics']['Not Hate Speech']
+        
+        print(f"{epoch_name:<8} | {metrics['accuracy']:.4f} | "
+              f"{hate_metrics['precision']:.4f} | "
+              f"{hate_metrics['recall']:.4f} | "
+              f"{hate_metrics.get('f1_score', hate_metrics.get('f1', 0)):.4f} | "
+              f"{non_hate_metrics['precision']:.4f} | "
+              f"{non_hate_metrics['recall']:.4f} | "
+              f"{non_hate_metrics.get('f1_score', non_hate_metrics.get('f1', 0)):.4f}")
 
 if __name__ == "__main__":
     compare_epochs()

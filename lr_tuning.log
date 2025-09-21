@@ -1,0 +1,37 @@
+2025-09-14 18:41:29,087 - src.utils - INFO - Starting learning rate tuning evaluation...
+2025-09-14 18:41:29,089 - src.utils - INFO - Testing learning rates: [1e-07, 5e-07, 1e-06, 5e-06, 1e-05, 5e-05, 0.0001, 0.0005]
+2025-09-14 18:41:29,089 - src.utils - INFO - Loading dataset...
+2025-09-14 18:41:30,014 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 18:41:30,015 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 18:41:31,829 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 18:41:31,829 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 18:41:31,839 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 18:41:31,844 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 18:41:31,844 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 18:41:31,844 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 18:41:31,844 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 18:41:31,845 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 18:41:31,845 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 18:41:34,194 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 18:41:34,195 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 18:41:34,196 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 18:41:34,196 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 18:41:34,197 - src.utils - INFO - Evaluating learning rate: 1e-07
+2025-09-14 18:41:34,224 - src.utils - INFO - Mixed precision training enabled
+2025-09-14 18:41:34,225 - src.utils - INFO - Trainer initialized on device: cuda
+2025-09-14 18:41:34,225 - src.utils - INFO - Training model with learning rate: 1e-07
+2025-09-14 18:41:37,143 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 18:41:37,145 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 18:41:37,145 - src.utils - INFO - Loss function: focal
+2025-09-14 18:41:37,585 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 18:41:39,920 - src.utils - INFO - Model parameters: 162842882
+2025-09-14 18:41:39,920 - src.utils - INFO - Optimizer: AdamW (lr=1e-07)
+2025-09-14 18:41:39,920 - src.utils - INFO - Scheduler: Linear with warmup (100 steps)
+2025-09-14 18:41:39,920 - src.utils - INFO - Starting training...
+2025-09-14 18:41:39,921 - src.utils - INFO - Epochs: 5
+2025-09-14 18:41:39,921 - src.utils - INFO - Batch size: 12
+2025-09-14 18:41:39,921 - src.utils - INFO - Learning rate: 1e-07
+2025-09-14 18:41:39,921 - src.utils - INFO - 
+==================================================
+2025-09-14 18:41:39,921 - src.utils - INFO - Epoch 1/5
+2025-09-14 18:41:39,922 - src.utils - INFO - ==================================================

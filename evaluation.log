@@ -157,3 +157,441 @@
 2025-09-12 20:35:17,230 - src.utils - INFO - Epoch: 3, Loss: 0.0562, Accuracy: 0.8729
 2025-09-12 20:35:17,233 - src.utils - INFO - Starting evaluation...
 2025-09-12 20:35:17,234 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:38:49,736 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 16:38:49,746 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 16:38:50,501 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 16:38:50,501 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:38:50,501 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:38:50,503 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 16:38:50,503 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:38:50,503 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:38:50,503 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 16:38:50,503 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:38:50,504 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:38:51,044 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 16:38:51,045 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 16:38:51,045 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 16:38:51,045 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 16:38:51,045 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 16:38:52,702 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:38:52,703 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:38:52,703 - src.utils - INFO - Loss function: focal
+2025-09-14 16:38:52,969 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:38:55,202 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_1.pt
+2025-09-14 16:38:55,202 - src.utils - INFO - Epoch: 1, Loss: 0.0436, Accuracy: 0.8535
+2025-09-14 16:38:55,204 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:38:55,204 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:40:13,808 - src.utils - INFO - 
+==================================================
+2025-09-14 16:40:13,808 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:40:13,808 - src.utils - INFO - ==================================================
+2025-09-14 16:40:13,808 - src.utils - INFO - Test Loss: 0.0459
+2025-09-14 16:40:13,808 - src.utils - INFO - Accuracy: 0.7784
+2025-09-14 16:40:13,810 - src.utils - INFO - Precision: 0.8489
+2025-09-14 16:40:13,810 - src.utils - INFO - Recall: 0.7784
+2025-09-14 16:40:13,810 - src.utils - INFO - F1-Score: 0.7848
+2025-09-14 16:40:13,810 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:40:13,810 - src.utils - INFO - ==================================================
+2025-09-14 16:40:15,179 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:40:15,180 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:40:15,180 - src.utils - INFO - Loss function: focal
+2025-09-14 16:40:15,296 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:40:17,376 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_2.pt
+2025-09-14 16:40:17,376 - src.utils - INFO - Epoch: 2, Loss: 0.0412, Accuracy: 0.8643
+2025-09-14 16:40:17,378 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:40:17,378 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:41:36,912 - src.utils - INFO - 
+==================================================
+2025-09-14 16:41:36,912 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:41:36,912 - src.utils - INFO - ==================================================
+2025-09-14 16:41:36,912 - src.utils - INFO - Test Loss: 0.0442
+2025-09-14 16:41:36,912 - src.utils - INFO - Accuracy: 0.8088
+2025-09-14 16:41:36,912 - src.utils - INFO - Precision: 0.8533
+2025-09-14 16:41:36,912 - src.utils - INFO - Recall: 0.8088
+2025-09-14 16:41:36,912 - src.utils - INFO - F1-Score: 0.8144
+2025-09-14 16:41:36,912 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:41:36,914 - src.utils - INFO - ==================================================
+2025-09-14 16:41:38,519 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:41:38,520 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:41:38,520 - src.utils - INFO - Loss function: focal
+2025-09-14 16:41:38,639 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:41:40,855 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_3.pt
+2025-09-14 16:41:40,856 - src.utils - INFO - Epoch: 3, Loss: 0.0662, Accuracy: 0.8667
+2025-09-14 16:41:40,858 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:41:40,858 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:43:00,687 - src.utils - INFO - 
+==================================================
+2025-09-14 16:43:00,687 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:43:00,687 - src.utils - INFO - ==================================================
+2025-09-14 16:43:00,687 - src.utils - INFO - Test Loss: 0.0751
+2025-09-14 16:43:00,687 - src.utils - INFO - Accuracy: 0.8484
+2025-09-14 16:43:00,687 - src.utils - INFO - Precision: 0.8604
+2025-09-14 16:43:00,687 - src.utils - INFO - Recall: 0.8484
+2025-09-14 16:43:00,688 - src.utils - INFO - F1-Score: 0.8512
+2025-09-14 16:43:00,688 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:43:00,688 - src.utils - INFO - ==================================================
+2025-09-14 16:43:01,643 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:43:01,644 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:43:01,644 - src.utils - INFO - Loss function: focal
+2025-09-14 16:43:01,763 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:43:03,915 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/best_marbert_model.pt
+2025-09-14 16:43:03,915 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 16:43:03,917 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:43:03,917 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:44:24,350 - src.utils - INFO - 
+==================================================
+2025-09-14 16:44:24,350 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:44:24,351 - src.utils - INFO - ==================================================
+2025-09-14 16:44:24,351 - src.utils - INFO - Test Loss: 0.1098
+2025-09-14 16:44:24,351 - src.utils - INFO - Accuracy: 0.8627
+2025-09-14 16:44:24,351 - src.utils - INFO - Precision: 0.8687
+2025-09-14 16:44:24,351 - src.utils - INFO - Recall: 0.8627
+2025-09-14 16:44:24,351 - src.utils - INFO - F1-Score: 0.8644
+2025-09-14 16:44:24,352 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:44:24,352 - src.utils - INFO - ==================================================
+2025-09-14 16:46:07,601 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 16:46:07,601 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 16:46:08,399 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 16:46:08,399 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:46:08,400 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:46:08,402 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 16:46:08,402 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:46:08,402 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:46:08,402 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 16:46:08,402 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:46:08,403 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:46:08,968 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 16:46:08,969 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 16:46:08,969 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 16:46:08,969 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 16:46:08,970 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 16:46:10,809 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:46:10,809 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:46:10,810 - src.utils - INFO - Loss function: focal
+2025-09-14 16:46:11,080 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:46:13,304 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_1.pt
+2025-09-14 16:46:13,304 - src.utils - INFO - Epoch: 1, Loss: 0.0436, Accuracy: 0.8535
+2025-09-14 16:46:13,307 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:46:13,307 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:47:33,268 - src.utils - INFO - 
+==================================================
+2025-09-14 16:47:33,268 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:47:33,268 - src.utils - INFO - ==================================================
+2025-09-14 16:47:33,269 - src.utils - INFO - Test Loss: 0.0459
+2025-09-14 16:47:33,269 - src.utils - INFO - Accuracy: 0.7784
+2025-09-14 16:47:33,269 - src.utils - INFO - Precision: 0.8489
+2025-09-14 16:47:33,269 - src.utils - INFO - Recall: 0.7784
+2025-09-14 16:47:33,269 - src.utils - INFO - F1-Score: 0.7848
+2025-09-14 16:47:33,269 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:47:33,270 - src.utils - INFO - ==================================================
+2025-09-14 16:47:34,329 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:47:34,329 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:47:34,329 - src.utils - INFO - Loss function: focal
+2025-09-14 16:47:34,447 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:47:36,567 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_2.pt
+2025-09-14 16:47:36,568 - src.utils - INFO - Epoch: 2, Loss: 0.0412, Accuracy: 0.8643
+2025-09-14 16:47:36,571 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:47:36,571 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:48:57,026 - src.utils - INFO - 
+==================================================
+2025-09-14 16:48:57,026 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:48:57,026 - src.utils - INFO - ==================================================
+2025-09-14 16:48:57,026 - src.utils - INFO - Test Loss: 0.0442
+2025-09-14 16:48:57,027 - src.utils - INFO - Accuracy: 0.8088
+2025-09-14 16:48:57,027 - src.utils - INFO - Precision: 0.8533
+2025-09-14 16:48:57,027 - src.utils - INFO - Recall: 0.8088
+2025-09-14 16:48:57,027 - src.utils - INFO - F1-Score: 0.8144
+2025-09-14 16:48:57,027 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:48:57,027 - src.utils - INFO - ==================================================
+2025-09-14 16:48:58,162 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:48:58,162 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:48:58,162 - src.utils - INFO - Loss function: focal
+2025-09-14 16:48:58,277 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:49:00,413 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_3.pt
+2025-09-14 16:49:00,413 - src.utils - INFO - Epoch: 3, Loss: 0.0662, Accuracy: 0.8667
+2025-09-14 16:49:00,415 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:49:00,415 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:50:20,944 - src.utils - INFO - 
+==================================================
+2025-09-14 16:50:20,945 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:50:20,945 - src.utils - INFO - ==================================================
+2025-09-14 16:50:20,945 - src.utils - INFO - Test Loss: 0.0751
+2025-09-14 16:50:20,945 - src.utils - INFO - Accuracy: 0.8484
+2025-09-14 16:50:20,945 - src.utils - INFO - Precision: 0.8604
+2025-09-14 16:50:20,946 - src.utils - INFO - Recall: 0.8484
+2025-09-14 16:50:20,946 - src.utils - INFO - F1-Score: 0.8512
+2025-09-14 16:50:20,946 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:50:20,946 - src.utils - INFO - ==================================================
+2025-09-14 16:50:21,910 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:50:21,911 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:50:21,911 - src.utils - INFO - Loss function: focal
+2025-09-14 16:50:22,030 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:50:24,384 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_4.pt
+2025-09-14 16:50:24,385 - src.utils - INFO - Epoch: 4, Loss: 0.0832, Accuracy: 0.8724
+2025-09-14 16:50:24,388 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:50:24,388 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:51:45,310 - src.utils - INFO - 
+==================================================
+2025-09-14 16:51:45,310 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:51:45,310 - src.utils - INFO - ==================================================
+2025-09-14 16:51:45,310 - src.utils - INFO - Test Loss: 0.0898
+2025-09-14 16:51:45,310 - src.utils - INFO - Accuracy: 0.8609
+2025-09-14 16:51:45,311 - src.utils - INFO - Precision: 0.8721
+2025-09-14 16:51:45,311 - src.utils - INFO - Recall: 0.8609
+2025-09-14 16:51:45,311 - src.utils - INFO - F1-Score: 0.8634
+2025-09-14 16:51:45,311 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:51:45,311 - src.utils - INFO - ==================================================
+2025-09-14 16:51:46,495 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:51:46,495 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:51:46,495 - src.utils - INFO - Loss function: focal
+2025-09-14 16:51:46,611 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:51:48,914 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_5.pt
+2025-09-14 16:51:48,914 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 16:51:48,916 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:51:48,917 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:53:10,262 - src.utils - INFO - 
+==================================================
+2025-09-14 16:53:10,262 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:53:10,262 - src.utils - INFO - ==================================================
+2025-09-14 16:53:10,262 - src.utils - INFO - Test Loss: 0.1098
+2025-09-14 16:53:10,262 - src.utils - INFO - Accuracy: 0.8627
+2025-09-14 16:53:10,263 - src.utils - INFO - Precision: 0.8687
+2025-09-14 16:53:10,263 - src.utils - INFO - Recall: 0.8627
+2025-09-14 16:53:10,263 - src.utils - INFO - F1-Score: 0.8644
+2025-09-14 16:53:10,263 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:53:10,263 - src.utils - INFO - ==================================================
+2025-09-14 16:53:11,301 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:53:11,302 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:53:11,302 - src.utils - INFO - Loss function: focal
+2025-09-14 16:53:11,423 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:53:13,533 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/best_marbert_model.pt
+2025-09-14 16:53:13,534 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 16:53:13,535 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:53:13,535 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 16:54:34,132 - src.utils - INFO - 
+==================================================
+2025-09-14 16:54:34,133 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 16:54:34,133 - src.utils - INFO - ==================================================
+2025-09-14 16:54:34,133 - src.utils - INFO - Test Loss: 0.1098
+2025-09-14 16:54:34,133 - src.utils - INFO - Accuracy: 0.8627
+2025-09-14 16:54:34,133 - src.utils - INFO - Precision: 0.8687
+2025-09-14 16:54:34,134 - src.utils - INFO - Recall: 0.8627
+2025-09-14 16:54:34,134 - src.utils - INFO - F1-Score: 0.8644
+2025-09-14 16:54:34,134 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 16:54:34,134 - src.utils - INFO - ==================================================
+2025-09-14 16:59:25,079 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 16:59:25,079 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 16:59:25,837 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 16:59:25,838 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:59:25,838 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 16:59:25,840 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 16:59:25,840 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:59:25,840 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 16:59:25,841 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 16:59:25,841 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:59:25,841 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 16:59:26,402 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 16:59:26,403 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 16:59:26,404 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 16:59:26,404 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 16:59:26,404 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 16:59:28,404 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 16:59:28,405 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 16:59:28,405 - src.utils - INFO - Loss function: focal
+2025-09-14 16:59:28,666 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 16:59:30,847 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_1.pt
+2025-09-14 16:59:30,847 - src.utils - INFO - Epoch: 1, Loss: 0.0436, Accuracy: 0.8535
+2025-09-14 16:59:30,850 - src.utils - INFO - Starting evaluation...
+2025-09-14 16:59:30,850 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:00:50,473 - src.utils - INFO - 
+==================================================
+2025-09-14 17:00:50,473 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:00:50,473 - src.utils - INFO - ==================================================
+2025-09-14 17:00:50,473 - src.utils - INFO - Test Loss: 0.0459
+2025-09-14 17:00:50,473 - src.utils - INFO - Accuracy: 0.7784
+2025-09-14 17:00:50,473 - src.utils - INFO - Precision: 0.8489
+2025-09-14 17:00:50,474 - src.utils - INFO - Recall: 0.7784
+2025-09-14 17:00:50,474 - src.utils - INFO - F1-Score: 0.7848
+2025-09-14 17:00:50,474 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:00:50,474 - src.utils - INFO - ==================================================
+2025-09-14 17:00:52,999 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:00:52,999 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:00:53,000 - src.utils - INFO - Loss function: focal
+2025-09-14 17:00:53,116 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:00:55,356 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_2.pt
+2025-09-14 17:00:55,356 - src.utils - INFO - Epoch: 2, Loss: 0.0412, Accuracy: 0.8643
+2025-09-14 17:00:55,358 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:00:55,359 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:09:08,500 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 17:09:08,501 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 17:09:09,278 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 17:09:09,278 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:09:09,279 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:09:09,281 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 17:09:09,281 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:09:09,281 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:09:09,281 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 17:09:09,281 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:09:09,282 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:09:09,831 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 17:09:09,831 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 17:09:09,832 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 17:09:09,832 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 17:09:09,832 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 17:09:11,812 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:09:11,813 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:09:11,813 - src.utils - INFO - Loss function: focal
+2025-09-14 17:09:12,076 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:09:14,228 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_1.pt
+2025-09-14 17:09:14,228 - src.utils - INFO - Epoch: 1, Loss: 0.0436, Accuracy: 0.8535
+2025-09-14 17:09:14,230 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:09:14,230 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:10:32,429 - src.utils - INFO - 
+==================================================
+2025-09-14 17:10:32,429 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:10:32,429 - src.utils - INFO - ==================================================
+2025-09-14 17:10:32,429 - src.utils - INFO - Test Loss: 0.0459
+2025-09-14 17:10:32,429 - src.utils - INFO - Accuracy: 0.7784
+2025-09-14 17:10:32,429 - src.utils - INFO - Precision: 0.8489
+2025-09-14 17:10:32,429 - src.utils - INFO - Recall: 0.7784
+2025-09-14 17:10:32,429 - src.utils - INFO - F1-Score: 0.7848
+2025-09-14 17:10:32,431 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:10:32,431 - src.utils - INFO - ==================================================
+2025-09-14 17:10:33,687 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:10:33,687 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:10:33,688 - src.utils - INFO - Loss function: focal
+2025-09-14 17:10:33,802 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:10:35,780 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_2.pt
+2025-09-14 17:10:35,780 - src.utils - INFO - Epoch: 2, Loss: 0.0412, Accuracy: 0.8643
+2025-09-14 17:10:35,782 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:10:35,782 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:15:01,665 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 17:15:01,665 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 17:15:02,429 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 17:15:02,430 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:15:02,430 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:15:02,432 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 17:15:02,432 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:15:02,432 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:15:02,432 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 17:15:02,432 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:15:02,432 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:15:02,986 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 17:15:02,987 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 17:15:02,988 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 17:15:02,988 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 17:15:02,988 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 17:15:04,749 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:15:04,750 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:15:04,750 - src.utils - INFO - Loss function: focal
+2025-09-14 17:15:04,994 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:15:06,908 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_1.pt
+2025-09-14 17:15:06,909 - src.utils - INFO - Epoch: 1, Loss: 0.0436, Accuracy: 0.8535
+2025-09-14 17:15:06,910 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:15:06,910 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:16:25,228 - src.utils - INFO - 
+==================================================
+2025-09-14 17:16:25,228 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:16:25,228 - src.utils - INFO - ==================================================
+2025-09-14 17:16:25,229 - src.utils - INFO - Test Loss: 0.0459
+2025-09-14 17:16:25,229 - src.utils - INFO - Accuracy: 0.7784
+2025-09-14 17:16:25,229 - src.utils - INFO - Precision: 0.8489
+2025-09-14 17:16:25,229 - src.utils - INFO - Recall: 0.7784
+2025-09-14 17:16:25,229 - src.utils - INFO - F1-Score: 0.7848
+2025-09-14 17:16:25,229 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:16:25,229 - src.utils - INFO - ==================================================
+2025-09-14 17:16:27,056 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:16:27,056 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:16:27,057 - src.utils - INFO - Loss function: focal
+2025-09-14 17:16:27,175 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:16:29,199 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_2.pt
+2025-09-14 17:16:29,199 - src.utils - INFO - Epoch: 2, Loss: 0.0412, Accuracy: 0.8643
+2025-09-14 17:16:29,200 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:16:29,200 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:17:48,077 - src.utils - INFO - 
+==================================================
+2025-09-14 17:17:48,077 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:17:48,077 - src.utils - INFO - ==================================================
+2025-09-14 17:17:48,077 - src.utils - INFO - Test Loss: 0.0442
+2025-09-14 17:17:48,077 - src.utils - INFO - Accuracy: 0.8088
+2025-09-14 17:17:48,077 - src.utils - INFO - Precision: 0.8533
+2025-09-14 17:17:48,078 - src.utils - INFO - Recall: 0.8088
+2025-09-14 17:17:48,078 - src.utils - INFO - F1-Score: 0.8144
+2025-09-14 17:17:48,078 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:17:48,078 - src.utils - INFO - ==================================================
+2025-09-14 17:17:50,159 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:17:50,159 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:17:50,160 - src.utils - INFO - Loss function: focal
+2025-09-14 17:17:50,280 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:17:52,485 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_3.pt
+2025-09-14 17:17:52,485 - src.utils - INFO - Epoch: 3, Loss: 0.0662, Accuracy: 0.8667
+2025-09-14 17:17:52,487 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:17:52,487 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:19:11,745 - src.utils - INFO - 
+==================================================
+2025-09-14 17:19:11,746 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:19:11,746 - src.utils - INFO - ==================================================
+2025-09-14 17:19:11,746 - src.utils - INFO - Test Loss: 0.0751
+2025-09-14 17:19:11,746 - src.utils - INFO - Accuracy: 0.8484
+2025-09-14 17:19:11,746 - src.utils - INFO - Precision: 0.8604
+2025-09-14 17:19:11,746 - src.utils - INFO - Recall: 0.8484
+2025-09-14 17:19:11,747 - src.utils - INFO - F1-Score: 0.8512
+2025-09-14 17:19:11,747 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:19:11,747 - src.utils - INFO - ==================================================
+2025-09-14 17:19:13,310 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:19:13,311 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:19:13,311 - src.utils - INFO - Loss function: focal
+2025-09-14 17:19:13,430 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:19:15,631 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_4.pt
+2025-09-14 17:19:15,631 - src.utils - INFO - Epoch: 4, Loss: 0.0832, Accuracy: 0.8724
+2025-09-14 17:19:15,633 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:19:15,633 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:20:35,157 - src.utils - INFO - 
+==================================================
+2025-09-14 17:20:35,157 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:20:35,157 - src.utils - INFO - ==================================================
+2025-09-14 17:20:35,158 - src.utils - INFO - Test Loss: 0.0898
+2025-09-14 17:20:35,158 - src.utils - INFO - Accuracy: 0.8609
+2025-09-14 17:20:35,158 - src.utils - INFO - Precision: 0.8721
+2025-09-14 17:20:35,158 - src.utils - INFO - Recall: 0.8609
+2025-09-14 17:20:35,158 - src.utils - INFO - F1-Score: 0.8634
+2025-09-14 17:20:35,158 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:20:35,159 - src.utils - INFO - ==================================================
+2025-09-14 17:20:37,244 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:20:37,245 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:20:37,245 - src.utils - INFO - Loss function: focal
+2025-09-14 17:20:37,362 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:20:39,650 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/marbert_hate_speech_model_epoch_5.pt
+2025-09-14 17:20:39,650 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 17:20:39,652 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:20:39,652 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:21:59,825 - src.utils - INFO - 
+==================================================
+2025-09-14 17:21:59,826 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:21:59,826 - src.utils - INFO - ==================================================
+2025-09-14 17:21:59,826 - src.utils - INFO - Test Loss: 0.1098
+2025-09-14 17:21:59,826 - src.utils - INFO - Accuracy: 0.8627
+2025-09-14 17:21:59,826 - src.utils - INFO - Precision: 0.8687
+2025-09-14 17:21:59,826 - src.utils - INFO - Recall: 0.8627
+2025-09-14 17:21:59,826 - src.utils - INFO - F1-Score: 0.8644
+2025-09-14 17:21:59,826 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:21:59,826 - src.utils - INFO - ==================================================
+2025-09-14 17:22:01,100 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:22:01,101 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:22:01,101 - src.utils - INFO - Loss function: focal
+2025-09-14 17:22:01,221 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:22:03,336 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models/best_marbert_model.pt
+2025-09-14 17:22:03,337 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 17:22:03,339 - src.utils - INFO - Starting evaluation...
+2025-09-14 17:22:03,339 - src.utils - INFO - Using threshold: 0.3
+2025-09-14 17:23:24,825 - src.utils - INFO - 
+==================================================
+2025-09-14 17:23:24,825 - src.utils - INFO - EVALUATION RESULTS
+2025-09-14 17:23:24,826 - src.utils - INFO - ==================================================
+2025-09-14 17:23:24,826 - src.utils - INFO - Test Loss: 0.1098
+2025-09-14 17:23:24,826 - src.utils - INFO - Accuracy: 0.8627
+2025-09-14 17:23:24,826 - src.utils - INFO - Precision: 0.8687
+2025-09-14 17:23:24,826 - src.utils - INFO - Recall: 0.8627
+2025-09-14 17:23:24,826 - src.utils - INFO - F1-Score: 0.8644
+2025-09-14 17:23:24,827 - src.utils - INFO - Threshold: 0.3000
+2025-09-14 17:23:24,827 - src.utils - INFO - ==================================================

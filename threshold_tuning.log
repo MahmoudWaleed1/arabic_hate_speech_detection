@@ -1,0 +1,126 @@
+2025-09-14 17:53:12,265 - src.utils - INFO - Starting threshold tuning evaluation...
+2025-09-14 17:53:12,266 - src.utils - INFO - Loading dataset...
+2025-09-14 17:53:12,891 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 17:53:12,891 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 17:53:13,687 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 17:53:13,688 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:53:13,688 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 17:53:13,699 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 17:53:13,699 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:53:13,699 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 17:53:13,699 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 17:53:13,699 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:53:13,699 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 17:53:14,258 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 17:53:14,258 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 17:53:14,258 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 17:53:14,258 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 17:53:14,259 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 17:53:14,259 - src.utils - INFO - Loading best model...
+2025-09-14 17:53:16,364 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 17:53:16,365 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 17:53:16,365 - src.utils - INFO - Loss function: focal
+2025-09-14 17:53:16,628 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 17:53:17,574 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models\best_marbert_model.pt
+2025-09-14 17:53:17,574 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 17:53:17,575 - src.utils - INFO - Best model loaded successfully
+2025-09-14 17:53:17,576 - src.utils - INFO - Getting predictions from test set...
+2025-09-14 17:54:35,563 - src.utils - INFO - Testing thresholds: [0.1  0.15 0.2  0.25 0.3  0.35 0.4  0.45 0.5  0.55 0.6  0.65 0.7 ]
+2025-09-14 17:54:35,563 - src.utils - INFO - Evaluating threshold: 0.10
+2025-09-14 17:54:35,573 - src.utils - INFO - Evaluating threshold: 0.15
+2025-09-14 17:54:35,580 - src.utils - INFO - Evaluating threshold: 0.20
+2025-09-14 17:54:35,586 - src.utils - INFO - Evaluating threshold: 0.25
+2025-09-14 17:54:35,593 - src.utils - INFO - Evaluating threshold: 0.30
+2025-09-14 17:54:35,599 - src.utils - INFO - Evaluating threshold: 0.35
+2025-09-14 17:54:35,606 - src.utils - INFO - Evaluating threshold: 0.40
+2025-09-14 17:54:35,612 - src.utils - INFO - Evaluating threshold: 0.45
+2025-09-14 17:54:35,618 - src.utils - INFO - Evaluating threshold: 0.50
+2025-09-14 17:54:35,624 - src.utils - INFO - Evaluating threshold: 0.55
+2025-09-14 17:54:35,631 - src.utils - INFO - Evaluating threshold: 0.60
+2025-09-14 17:54:35,638 - src.utils - INFO - Evaluating threshold: 0.65
+2025-09-14 17:54:35,644 - src.utils - INFO - Evaluating threshold: 0.70
+2025-09-14 17:54:35,650 - src.utils - INFO - Best threshold: 0.65 (F1-score: 0.8673)
+2025-09-14 18:32:52,642 - src.utils - INFO - Starting threshold tuning evaluation...
+2025-09-14 18:32:52,644 - src.utils - INFO - Loading dataset...
+2025-09-14 18:32:53,462 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-14 18:32:53,462 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-14 18:32:55,206 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-14 18:32:55,206 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 18:32:55,208 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-14 18:32:55,213 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-14 18:32:55,213 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-14 18:32:55,213 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-14 18:32:55,214 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-14 18:32:55,214 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 18:32:55,214 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-14 18:32:57,470 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-14 18:32:57,471 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-14 18:32:57,472 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-14 18:32:57,472 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-14 18:32:57,473 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-14 18:32:57,473 - src.utils - INFO - Loading best model...
+2025-09-14 18:33:00,455 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-14 18:33:00,457 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-14 18:33:00,457 - src.utils - INFO - Loss function: focal
+2025-09-14 18:33:00,882 - src.utils - INFO - Model created and moved to cuda
+2025-09-14 18:33:03,719 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models\best_marbert_model.pt
+2025-09-14 18:33:03,719 - src.utils - INFO - Epoch: 5, Loss: 0.0994, Accuracy: 0.8729
+2025-09-14 18:33:03,723 - src.utils - INFO - Best model loaded successfully
+2025-09-14 18:33:03,723 - src.utils - INFO - Getting predictions from test set...
+2025-09-14 18:35:00,435 - src.utils - INFO - Testing thresholds: [0.3  0.35 0.4  0.45 0.5  0.55 0.6  0.65 0.7  0.75 0.8  0.85 0.9 ]
+2025-09-14 18:35:00,435 - src.utils - INFO - Evaluating threshold: 0.30
+2025-09-14 18:35:00,467 - src.utils - INFO - Evaluating threshold: 0.35
+2025-09-14 18:35:00,484 - src.utils - INFO - Evaluating threshold: 0.40
+2025-09-14 18:35:00,501 - src.utils - INFO - Evaluating threshold: 0.45
+2025-09-14 18:35:00,516 - src.utils - INFO - Evaluating threshold: 0.50
+2025-09-14 18:35:00,530 - src.utils - INFO - Evaluating threshold: 0.55
+2025-09-14 18:35:00,549 - src.utils - INFO - Evaluating threshold: 0.60
+2025-09-14 18:35:00,567 - src.utils - INFO - Evaluating threshold: 0.65
+2025-09-14 18:35:00,583 - src.utils - INFO - Evaluating threshold: 0.70
+2025-09-14 18:35:00,597 - src.utils - INFO - Evaluating threshold: 0.75
+2025-09-14 18:35:00,611 - src.utils - INFO - Evaluating threshold: 0.80
+2025-09-14 18:35:00,631 - src.utils - INFO - Evaluating threshold: 0.85
+2025-09-14 18:35:00,644 - src.utils - INFO - Evaluating threshold: 0.90
+2025-09-14 18:35:00,658 - src.utils - INFO - Best threshold: 0.65 (F1-score: 0.8673)
+2025-09-21 04:41:36,394 - src.utils - INFO - Starting threshold tuning evaluation...
+2025-09-21 04:41:36,406 - src.utils - INFO - Loading dataset...
+2025-09-21 04:41:37,703 - src.utils - INFO - Tokenizer loaded: UBC-NLP/MARBERT
+2025-09-21 04:41:37,703 - src.utils - INFO - Loading cleaned dataset from CSV file...
+2025-09-21 04:41:39,347 - src.utils - INFO - Successfully loaded 50000 samples from CSV
+2025-09-21 04:41:39,348 - src.utils - INFO - Data split - Train: 35000, Val: 7500, Test: 7500
+2025-09-21 04:41:39,348 - src.utils - INFO - After split - Train: 35000, Val: 7500, Test: 7500
+2025-09-21 04:41:39,353 - src.utils - INFO - Train label distribution: {0: 23411, 1: 11589}
+2025-09-21 04:41:39,353 - src.utils - INFO - Validation label distribution: {0: 5026, 1: 2474}
+2025-09-21 04:41:39,355 - src.utils - INFO - Test label distribution: {0: 5026, 1: 2474}
+2025-09-21 04:41:39,355 - src.utils - INFO - Dataset initialized with 35000 samples
+2025-09-21 04:41:39,355 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-21 04:41:39,356 - src.utils - INFO - Dataset initialized with 7500 samples
+2025-09-21 04:41:41,797 - src.utils - INFO - Created WeightedRandomSampler with class weights: [4.27149631e-05 8.62887221e-05]
+2025-09-21 04:41:41,797 - src.utils - INFO - Class distribution: [23411 11589]
+2025-09-21 04:41:41,798 - src.utils - INFO - Using WeightedRandomSampler for training
+2025-09-21 04:41:41,799 - src.utils - INFO - DataLoaders created - Batch size: 12
+2025-09-21 04:41:41,799 - src.utils - INFO - Evaluator initialized on device: cuda
+2025-09-21 04:41:41,800 - src.utils - INFO - Loading best model...
+2025-09-21 04:41:49,224 - src.utils - INFO - Model initialized with 162842882 parameters
+2025-09-21 04:41:49,225 - src.utils - INFO - Trainable parameters: 162842882
+2025-09-21 04:41:49,225 - src.utils - INFO - Loss function: focal
+2025-09-21 04:41:49,644 - src.utils - INFO - Model created and moved to cuda
+2025-09-21 04:41:51,231 - src.utils - INFO - Model loaded from C:\deep learning\Balanced data\models\best_marbert_model.pt
+2025-09-21 04:41:51,232 - src.utils - INFO - Epoch: 4, Loss: 0.0860, Accuracy: 0.8729
+2025-09-21 04:41:51,234 - src.utils - INFO - Best model loaded successfully
+2025-09-21 04:41:51,234 - src.utils - INFO - Getting predictions from test set...
+2025-09-21 04:43:48,802 - src.utils - INFO - Testing thresholds: [0.3  0.35 0.4  0.45 0.5  0.55 0.6  0.65 0.7  0.75 0.8  0.85 0.9 ]
+2025-09-21 04:43:48,802 - src.utils - INFO - Evaluating threshold: 0.30
+2025-09-21 04:43:48,820 - src.utils - INFO - Evaluating threshold: 0.35
+2025-09-21 04:43:48,839 - src.utils - INFO - Evaluating threshold: 0.40
+2025-09-21 04:43:48,856 - src.utils - INFO - Evaluating threshold: 0.45
+2025-09-21 04:43:48,879 - src.utils - INFO - Evaluating threshold: 0.50
+2025-09-21 04:43:48,895 - src.utils - INFO - Evaluating threshold: 0.55
+2025-09-21 04:43:48,910 - src.utils - INFO - Evaluating threshold: 0.60
+2025-09-21 04:43:48,928 - src.utils - INFO - Evaluating threshold: 0.65
+2025-09-21 04:43:48,943 - src.utils - INFO - Evaluating threshold: 0.70
+2025-09-21 04:43:48,958 - src.utils - INFO - Evaluating threshold: 0.75
+2025-09-21 04:43:48,975 - src.utils - INFO - Evaluating threshold: 0.80
+2025-09-21 04:43:48,990 - src.utils - INFO - Evaluating threshold: 0.85
+2025-09-21 04:43:49,004 - src.utils - INFO - Evaluating threshold: 0.90
+2025-09-21 04:43:49,021 - src.utils - INFO - Best threshold: 0.45 (F1-score: 0.8684)

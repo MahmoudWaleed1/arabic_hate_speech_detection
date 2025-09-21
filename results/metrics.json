@@ -1,29 +1,32 @@
 {
   "train_losses": [
-    0.03827000660006848,
-    0.024098919233846657,
-    0.018578654951235167
+    0.03672242987652577,
+    0.022358803627080058,
+    0.015344187672331826,
+    0.010163165069781281
   ],
   "val_losses": [
-    0.043493933169916274,
-    0.04196727819498628,
-    0.05617550628894242
+    0.04204120475910604,
+    0.05223405740992166,
+    0.08258297552452423,
+    0.09018143457057885
   ],
   "val_accuracies": [
-    0.8552,
-    0.8625333333333334,
-    0.8729333333333333
+    0.8616,
+    0.8601333333333333,
+    0.854,
+    0.8530666666666666
   ],
-  "best_accuracy": 0.8729333333333333,
-  "total_epochs": 3,
-  "total_time": 2581.7148230075836,
+  "best_accuracy": 0.8616,
+  "total_epochs": 4,
+  "total_time": 14089.71558046341,
   "config": {
     "model_name": "UBC-NLP/MARBERT",
     "num_labels": 2,
     "max_length": 128,
     "batch_size": 12,
-    "learning_rate": 9e-06,
-    "num_epochs": 3,
+    "learning_rate": 3e-05,
+    "num_epochs": 5,
     "warmup_steps": 100,
     "weight_decay": 0.01,
     "dataset_name": "manueltonneau/arabic-hate-speech-superset",
@@ -49,7 +52,7 @@
     "dataloader_pin_memory": true,
     "seed": 42,
     "loss_function": "focal",
-    "threshold": 0.3,
+    "threshold": 0.65,
     "use_sampler": true,
     "focal_alpha": 0.7,
     "focal_gamma": 3
